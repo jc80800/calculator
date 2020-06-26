@@ -13,3 +13,26 @@
     text-align: center;
     font-size: 60px;
 }
+
+.operatorBtns {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    margin: 1fr;
+}
+
+.buttons {
+    background-color: white;
+    border: 3x solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+.answer-item {
+    text-align: center;
+    font-size: 60px;
+}
