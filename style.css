@@ -5,8 +5,6 @@
     border: 3px solid black;
     padding: 50px;
     position: relative;
-    top: 300px;
-    left: 500px;
 }
 
 .display-item {
@@ -16,8 +14,10 @@
 
 .operatorBtns {
     display: grid;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr;
     margin: 1fr;
+    padding: 1fr;
 }
 
 .buttons {

@@ -19,13 +19,16 @@ function changeDisplay(result){
 let expression = "";
 
 function addBtns(){
-    let addBtns = document.createElement("button");
-    addBtns.innerText = "1";
-    addBtns.addEventListener('click', () => {
-        expression = expression + 1;
-        console.log(expression);
-    });
-    buttons.appendChild(addBtns).className = "button";
+    for(let i = 1; i < 10; i++){
+        let btn = document.createElement("button");
+        btn.innerText = i;
+        btn.addEventListener('click', () => {
+            expression =expression + i;
+            console.log(expression);
+            changeDisplay(expression);
+        })
+        buttons.appendChild(btn).className = "button";
+    }
 }
 
 function addOperate(num1){
@@ -34,17 +37,20 @@ function addOperate(num1){
     additionBtn.addEventListener('click', () => {
         expression = expression + " + ";
         console.log(expression);
+        changeDisplay(expression);
     })
     buttons.appendChild(additionBtn).className = "button";
 }
 
 function readString(){
     let operate = document.createElement("button");
+    operate.innerText = "="
     operate.addEventListener('click', () => {
         stringArray = expression.split(" ");
         let num1 = parseInt(stringArray[0]);
         let num2 = parseInt(stringArray[2]);
         console.log(num1 + num2);
+        changeDisplay(num1 + num2);
     })
     buttons.appendChild(operate).className = "button";
 }
