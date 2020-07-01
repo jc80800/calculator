@@ -31,16 +31,33 @@ function addBtns(){
     }
 }
 
-function addOperate(num1){
-    let additionBtn = document.createElement("button");
-    additionBtn.innerText = "+";
-    additionBtn.addEventListener('click', () => {
-        expression = expression + " + ";
-        console.log(expression);
-        changeDisplay(expression);
+function addOperate(){
+    let operationSign = ["+", "-", "*", "/"];
+    for (let i = 0; i < 4; i ++){
+        let additionBtn = document.createElement("button");
+        for (let j = 0; j < 4; j++){
+            additionBtn.innerText = operationSign[i];
+        }
+        additionBtn.addEventListener('click', () => {
+            if (i = 0) {
+                expression = expression + " + ";
+            }
+            else if(i = 1){
+                expression = expression + " - ";
+            }
+            else if(i = 2){
+                expression = expression + " * ";
+            }
+            else {
+                expression = expression + " / ";
+            }
+            console.log(expression);
+            changeDisplay(expression);
     })
-    buttons.appendChild(additionBtn).className = "button";
+    buttons.appendChild(additionBtn).className = "operateButtons";
+    }
 }
+
 
 function readString(){
     let operate = document.createElement("button");
