@@ -1,38 +1,43 @@
-.display {
-    background-color: white;
-    width: 500px;
-    margin: 20px;
+#container {
+    width: 105em;
+    height: 45em;
+    margin: 50px;
     border: 3px solid black;
     padding: 50px;
-    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 12em auto;
+}
+
+.display {
+    background-color: white;
+    border: 3px solid black;
+    height: 10em;
 }
 
 .display-item {
-    text-align: center;
-    font-size: 60px;
+    margin: 40px;
+    font-size: 70px;
+    position: fixed;
 }
 
-.operatorBtns {
+.numberBtns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 2fr 2fr;
-    margin: 1fr;
-    padding: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.buttons {
-    background-color: white;
-    border: 3x solid black;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+.zero {
+    grid-row: 4;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1fr;
 }
 
-
-.answer-item {
-    text-align: center;
-    font-size: 60px;
+.operatingBtns {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
+

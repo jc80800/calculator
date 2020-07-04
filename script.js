@@ -1,10 +1,13 @@
 const container = document.getElementById("container");
 const display = document.querySelector('.display');
-const buttons = document.querySelector('.operatorBtns');
+const buttons = document.querySelector('.numberBtns');
+const operatingbuttons = document.querySelector('.operatingBtns');
+const equalbuttons = document.querySelector('.equalBtn');
+const zero = document.querySelector('.zero');
 
 function makeDisplay(){
     let bar = document.createElement("div");
-    bar.innerText = "Answer will be displayed here"
+    bar.innerText = " "
     display.appendChild(bar).className = "display-item";
 }
 
@@ -29,6 +32,14 @@ function addBtns(){
         })
         buttons.appendChild(btn).className = "button";
     }
+    let btn = document.createElement("button");
+        btn.innerText = "0";
+        btn.addEventListener('click', () => {
+            expression =expression + 0;
+            console.log(expression);
+            changeDisplay(expression);
+        })
+        zero.appendChild(btn).className = "button";
 }
 
 function addOperate(){
@@ -45,7 +56,7 @@ function additionBtn() {
         expression = expression + " + ";
         changeDisplay(expression);
     })
-    buttons.appendChild(additionBtn).className = "additionBtn";
+    operatingbuttons.appendChild(additionBtn).className = "additionBtn";
 }
 
 function subtractBtn() {
@@ -55,7 +66,7 @@ function subtractBtn() {
         expression = expression + " - ";
         changeDisplay(expression);
     })
-    buttons.appendChild(additionBtn).className = "additionBtn";
+    operatingbuttons.appendChild(additionBtn).className = "additionBtn";
 }
 
 function multiplyBtn() {
@@ -65,7 +76,7 @@ function multiplyBtn() {
         expression = expression + " * ";
         changeDisplay(expression);
     })
-    buttons.appendChild(additionBtn).className = "additionBtn";
+    operatingbuttons.appendChild(additionBtn).className = "additionBtn";
 }
 
 function divideBtn() {
@@ -75,7 +86,7 @@ function divideBtn() {
         expression = expression + " / ";
         changeDisplay(expression);
     })
-    buttons.appendChild(additionBtn).className = "additionBtn";
+    operatingbuttons.appendChild(additionBtn).className = "additionBtn";
 }
 
 
@@ -101,7 +112,7 @@ function readString(){
         }
         expression = "";
     })
-    buttons.appendChild(operate).className = "button";
+    equalbuttons.appendChild(operate).className = "button";
 }
 
 
