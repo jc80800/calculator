@@ -1,11 +1,11 @@
 #container {
-    width: 105em;
+    width: 100em;
     height: 45em;
     margin: 50px;
     border: 3px solid black;
     padding: 50px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50em 50em;
     grid-template-rows: 12em auto;
 }
 
@@ -37,7 +37,38 @@
 
 .operatingBtns {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 15em 1em;
+    grid-template-rows: 15em 1em ;
+    margin: 8em;
+    position: relative;
+    top: -5em;
+    left: 3em;
+}
+
+.additionBtn {
+    border-radius: 25px;
+    border: 2px solid black;
+    outline: none;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+.equalBtn {
+    display: grid;
+    grid-template-columns: 5em;
+    grid-template-rows: 5em;
+    position: relative;
+    left: 18em;
+    top: 20em;
+}
+
+.calculatebutton{
+    border-radius: 25px;
+    border: 2px solid black;
+    outline: none;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
 }
 

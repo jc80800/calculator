@@ -112,7 +112,7 @@ function readString(){
         }
         expression = "";
     })
-    equalbuttons.appendChild(operate).className = "button";
+    equalbuttons.appendChild(operate).className = "calculatebutton";
 }
 
 
