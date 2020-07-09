@@ -3,7 +3,6 @@ const display = document.querySelector('.display');
 const buttons = document.querySelector('.numberBtns');
 const operatingbuttons = document.querySelector('.operatingBtns');
 const equalbuttons = document.querySelector('.equalBtn');
-const zero = document.querySelector('.zero');
 
 function makeDisplay(){
     let bar = document.createElement("div");
@@ -33,13 +32,34 @@ function addBtns(){
         buttons.appendChild(btn).className = "button";
     }
     let btn = document.createElement("button");
-        btn.innerText = "0";
-        btn.addEventListener('click', () => {
-            expression =expression + 0;
-            console.log(expression);
-            changeDisplay(expression);
-        })
-        zero.appendChild(btn).className = "button";
+    btn.innerText = "0";
+    btn.addEventListener('click', () => {
+        expression = expression + 0;
+        console.log(expression);
+        changeDisplay(expression);
+    })
+    buttons.appendChild(btn).className = "button";
+
+    let decimal = document.createElement("button");
+    decimal.innerText = ".";
+    decimal.addEventListener('click', () => {
+        expression = expression + ".";
+        console.log(expression);
+        changeDisplay(expression);
+    })
+    buttons.appendChild(decimal).className = "button";
+
+    let clear = document.createElement("button");
+    clear.innerText = ".";
+    clear.addEventListener('click', () => {
+        expression = " ";
+        console.log(expression);
+        changeDisplay(expression);
+    })
+    buttons.appendChild(clear).className = "button";
+
+
+
 }
 
 function addOperate(){

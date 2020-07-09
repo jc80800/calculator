@@ -27,14 +27,6 @@
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.zero {
-    grid-row: 4;
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column: 1fr;
-}
-
 .operatingBtns {
     display: grid;
     grid-template-columns: 15em 1em;
