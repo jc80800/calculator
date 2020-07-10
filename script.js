@@ -50,7 +50,7 @@ function addBtns(){
     buttons.appendChild(decimal).className = "button";
 
     let clear = document.createElement("button");
-    clear.innerText = ".";
+    clear.innerText = "AC";
     clear.addEventListener('click', () => {
         expression = " ";
         console.log(expression);
@@ -115,8 +115,8 @@ function readString(){
     operate.innerText = "="
     operate.addEventListener('click', () => {
         stringArray = expression.split(" ");
-        let num1 = parseInt(stringArray[0]);
-        let num2 = parseInt(stringArray[2]);
+        let num1 = parseFloat(stringArray[0]);
+        let num2 = parseFloat(stringArray[2]);
         let operation = stringArray[1];
         if (operation === "+"){
             changeDisplay(num1 + num2);
